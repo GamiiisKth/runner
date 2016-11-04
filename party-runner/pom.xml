@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>se.joshua</groupId>
+        <artifactId>runner</artifactId>
+        <version>0.0.1-SNAPSHOT</version>    </parent>
+
+    <artifactId>party-runner</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+
+    <!--
+        Override scope=provided form parent since the runners needs them to run
+    -->
+
+<properties>
+    <backend.party.version>0.0.1-SNAPSHOT</backend.party.version>
+    <pu.party.version>0.0.1-SNAPSHOT</pu.party.version>
+
+</properties>
+    <dependencies>
+
+        <!--
+           Common dependencies
+       -->
+        <dependency>
+            <groupId>com.so4it.sugar</groupId>
+            <artifactId>common-builder</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.so4it.sugar</groupId>
+            <artifactId>common-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.so4it.sugar</groupId>
+            <artifactId>common-util</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>se.joshua</groupId>
+            <artifactId>backend-party-configuration</artifactId>
+            <version>${backend.party.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>se.joshua</groupId>
+            <artifactId>backend-component-party-entity</artifactId>
+            <version>${backend.party.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>se.joshua</groupId>
+            <artifactId>backend-component-party-service</artifactId>
+            <version>${backend.party.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>se.joshua</groupId>
+            <artifactId>pu-party-component</artifactId>
+            <version>${pu.party.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.so4it.sugar</groupId>
+            <artifactId>platform-provided-dependencies-2.0.0</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
+
+</project>
